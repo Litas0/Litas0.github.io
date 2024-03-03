@@ -9,7 +9,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
-    background-color: #24252a;
+    background-color: #0A1828;
 }
    
 .menu {
@@ -40,7 +40,7 @@ header {
 .dot {
     margin-left: 20px;
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: #dd1c1a;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -48,18 +48,30 @@ header {
 }
 
 body {
-    background: #256EFF;
+    background: #0A1828;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 h1 {
-    color: #fefae0;
-    font-family: Amita;
-    margin: 20px auto;
-    width: 450px;
-    font-size: 3rem;
+    margin-top: 20px;
+    font-size: 70px;
+    font-weight: 600;
+    color: #BFA181;
+    background-clip: text;
+    text-align: center;
+  }
+
+h3 {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #BFA181;
+    background-clip: text;
     text-align: center;
 }
 
@@ -67,17 +79,6 @@ h1 {
     width: 450px;
     height: 300px;
     margin: 10px;
-    border: 5px solid #fff;
-}
-
-footer {
-    background-color: #bc6c25;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    min-width: 100vw;
 }
 .container {
     display: flex;
