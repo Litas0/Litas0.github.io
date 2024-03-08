@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style2.css" />
+</head>
+<body>
+  <h1 class="title"> Kółko i krzyżyk </h1>
+  <div class="setup">
+    <p class="mess" id="players2">Wybierz liczbe graczy</p>
+    <div class="select" id="players1">
+      <select name="players" id="players">
+        <option value="0" selected disabled>-</option>
+        <option value="1">Jeden gracz</option>
+        <option value="2">Dwóch graczy</option>
+      </select>
+    </div>
+    <p class="mess" id="diff2">Wybierz poziom trudności</p>
+    <div class="select" id="diff1">
+      <select name="diff" id="diff">
+        <option value="0" selected disabled>-</option>
+        <option value="1">Łatwy</option>
+        <option value="2">Średni</option>
+        <option value="3">Trudny</option>
+      </select>
+    </div>
+    <button id="start" onClick="onStartGame()"> Rozpocznij gre </button>
+  </div>
+  <table id="board">
+    <tr>
+      <td class="cell" id="0"></td>
+      <td class="cell" id="1"></td>
+      <td class="cell" id="2"></td>
+    </tr>
+    <tr>
+      <td class="cell" id="3"></td>
+      <td class="cell" id="4"></td>
+      <td class="cell" id="5"></td>
+    </tr>
+    <tr>
+      <td class="cell" id="6"></td>
+      <td class="cell" id="7"></td>
+      <td class="cell" id="8"></td>
+    </tr>
+  </table> 
+  <div class="end-game">
+    <div class="text"> Koniec </div>
+    <button id="restart" onClick="onStartGame()"> Zagraj jeszcze raz </button>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

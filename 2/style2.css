@@ -1,0 +1,143 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #EEEEEE;
+  background-color: #393E46;
+}
+.title {
+  position: fixed;
+  left: 34%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+}
+.setup {
+  position: fixed;
+  left: 41%;
+  top: 20%;
+}
+.mess{
+  font-size: 30px;
+  margin-left: 14px;
+}
+#diff1, #diff2, #start {
+  display: none;
+}
+select {
+  outline:0;
+  border: none;
+  background: #393E46;
+  flex: 1;
+  padding: 0.5em;
+  color:#EEEEEE;
+  cursor:pointer;
+  font-size: 1.2em;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #393E46;
+  overflow: hidden;
+  border-radius: .25em;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #393E46;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #00ADB5;
+}
+
+table {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-collapse: collapse;
+  transform: translate(-50%, -50%);
+}
+
+td {
+  border: 2px solid #EEEEEE;
+  height: 150px;
+  width: 150px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 120px;
+  cursor: pointer;
+}
+
+table tr:first-child td {
+  border-top: 0;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table tr td:first-child {
+  border-left: 0;
+}
+
+table tr td:last-child {
+  border-right: 0;
+}
+
+.setup button {
+  position: fixed;
+  top: 53%;
+  left: 37.5%;
+  cursor: pointer;
+  color: #ecf0f1;
+  font-size: 17px;
+  background-color: #00ADB5;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all .1s;
+  width: 450px;
+  font-size: 1.5em;
+}
+.end-game {
+  display: none;
+  position: fixed;
+  top: 16%;
+  left: 42%;
+  padding: 30px;
+  width: 300px;
+  box-sizing: border-box;
+  color: #EEEEEE;
+  background-color: #393E46;
+  border: 0;
+  font-size: 30px;
+  text-align: center;
+}
+.end-game button {
+  display: none;
+  position: fixed;
+  top: 75%;
+  left: 38%;
+  cursor: pointer;
+  color: #ecf0f1;
+  font-size: 17px;
+  background-color: #393E46;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all .1s;
+  width: 450px;
+  font-size: 1.5em;
+  text-align: center;
+}
