@@ -75,6 +75,8 @@ function onSetupGame() {
   document.getElementById("change").style.display = 'none';
   document.querySelector('.end-game').style.display = 'none';
   document.querySelector('.board').style.display = 'none';
+  document.getElementById("diff1").style.display = 'none';
+  document.getElementById("diff2").style.display = 'none';
 
   document.querySelector('.setup').style.display = 'block';
 
