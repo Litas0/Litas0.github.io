@@ -29,9 +29,10 @@ p.addEventListener('change', (e) => {
     players = 1;
 
     document.getElementById("start").style.display = 'none';
+    document.querySelector('.start').style.display = 'none';
 
-    document.getElementById("diff1").style.display = 'flex';
-    document.getElementById("diff2").style.display = 'inherit';
+    document.getElementById("diff1").style.display = 'block';
+    document.getElementById("diff2").style.display = 'block';
   }
   if(value === '2') {
     players = 2;
@@ -39,7 +40,8 @@ p.addEventListener('change', (e) => {
     document.getElementById("diff1").style.display = 'none';
     document.getElementById("diff2").style.display = 'none';
 
-    document.getElementById("start").style.display = 'inherit';
+    document.getElementById("start").style.display = 'block';
+    document.querySelector('.start').style.display = 'block';
   }
 });
 
@@ -48,14 +50,16 @@ d.addEventListener('change', (f) => {
   const value = f.target.value;
   if(value === '1' || value === '2' || value === '3') { 
     difficulty = value;
-    document.getElementById("start").style.display = 'inherit';
+    document.getElementById("start").style.display = 'block';
+    document.querySelector('.start').style.display = 'block';
   }
 });
 
 function onStartGame () {
   document.querySelector('.setup').style.display = 'none';
+  document.querySelector('.start').style.display = 'none';
   document.querySelector('.end-game').style.display = 'none';
-  document.getElementById("board").style.display = 'inherit';
+  document.querySelector('.board').style.display = 'block';
   origBoard = Array.from(Array(9).keys());
   for(let i=0; i< cells.length; i++) {
     cells[i].innerText = '';
@@ -73,6 +77,10 @@ function onSetupGame() {
   document.getElementById("board").style.display = 'none';
 
   document.querySelector('.setup').style.display = 'block';
+
+  document.getElementById("players").selectedIndex = 0;
+  document.getElementById("diff").selectedIndex = 0;
+
   GameUp = false;
 }
 

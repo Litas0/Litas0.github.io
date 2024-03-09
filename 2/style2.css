@@ -1,71 +1,102 @@
+html * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 body {
   font-family: "Montserrat", sans-serif;
   color: #EEEEEE;
   background-color: #393E46;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  row-gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.container div{
+  width: 100%;
+  margin-bottom: 15px;
+}
 .title {
-  position: fixed;
-  left: 34%;
+  width: 100%;
   font-family: 'Dancing Script', cursive;
   font-size: 80px;
-}
-.setup {
-  position: fixed;
-  left: 41%;
-  top: 20%;
+  text-align: center;
 }
 .mess{
-  font-size: 30px;
-  margin-left: 14px;
+  text-align: center;
+  font-size: 40px;
 }
 #diff1, #diff2, #start {
   display: none;
 }
 select {
-  outline:0;
-  border: none;
-  background: #393E46;
-  flex: 1;
-  padding: 0.5em;
-  color:#EEEEEE;
-  cursor:pointer;
-  font-size: 1.2em;
-}
-select::-ms-expand {
-  display: none;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 25%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
 }
 .select {
-  position: relative;
-  display: flex;
-  width: 20em;
-  height: 3em;
-  line-height: 3;
-  background: #393E46;
-  overflow: hidden;
-  border-radius: .25em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.select::before,
+.select::after {
+  --size: 0.3rem;
+  content: "";
+  position: absolute;
+  right: 1rem;
+  pointer-events: none;
+}
+.select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
 }
 .select::after {
-  content: '\25BC';
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background: #393E46;
-  cursor:pointer;
-  pointer-events:none;
-  transition:.25s all ease;
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
 }
-.select:hover::after {
-  color: #00ADB5;
+.start {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  color: #ecf0f1;
+  background-color: #393E46;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all .1s;
+  width: 450px;
+  font-size: 35px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board {
+  display: none;
 }
 
 table {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
   border-collapse: collapse;
-  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td {
@@ -95,55 +126,28 @@ table tr td:last-child {
   border-right: 0;
 }
 
-.setup button {
-  position: fixed;
-  top: 53%;
-  left: 37.5%;
-  cursor: pointer;
-  color: #ecf0f1;
-  font-size: 17px;
-  background-color: #00ADB5;
-  border: 1px solid #EEEEEE;
-  border-radius: 5px;
-  padding: 10px;
-  transition: all .1s;
-  width: 450px;
-  font-size: 1.5em;
-}
 .end-game {
   display: none;
-  position: fixed;
-  top: 16%;
-  left: 40%;
   padding: 30px;
-  width: 400px;
   box-sizing: border-box;
   color: #EEEEEE;
   background-color: #393E46;
   border: 0;
-  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
   text-align: center;
 }
 .end-game button {
   display: none;
-  position: fixed;
   cursor: pointer;
   color: #ecf0f1;
-  font-size: 17px;
   background-color: #393E46;
   border: 1px solid #EEEEEE;
   border-radius: 5px;
   padding: 10px;
   transition: all .1s;
   width: 450px;
-  font-size: 1.5em;
+  font-size: 35px;
   text-align: center;
-}
-.end-game #restart {
-  top: 75%;
-  left: 38%;
-}
-.end-game #change {
-  top: 85%;
-  left: 38%;
+  margin-top: 10px;
 }

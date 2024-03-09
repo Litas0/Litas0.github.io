@@ -8,48 +8,60 @@
   <link rel="stylesheet" type="text/css" media="screen" href="style2.css" />
 </head>
 <body>
-  <h1 class="title"> Kółko i krzyżyk </h1>
-  <div class="setup">
-    <p class="mess" id="players2">Wybierz liczbe graczy</p>
-    <div class="select" id="players1">
-      <select name="players" id="players">
-        <option value="0" selected disabled>-</option>
-        <option value="1">Jeden gracz</option>
-        <option value="2">Dwóch graczy</option>
-      </select>
+  <div class="container">
+    <div class="title">
+      <h1 class="title"> Kółko i krzyżyk </h1>
     </div>
-    <p class="mess" id="diff2">Wybierz poziom trudności</p>
-    <div class="select" id="diff1">
-      <select name="diff" id="diff">
-        <option value="0" selected disabled>-</option>
-        <option value="1">Łatwy</option>
-        <option value="2">Średni</option>
-        <option value="3">Trudny</option>
-      </select>
+    <div class="setup">
+      <div class="mess"> 
+        <p class="mess" id="players2">Wybierz liczbe graczy</p>
+      </div>
+      <div class="select" id="players1">
+        <select name="players" id="players">
+          <option value="0" selected disabled>-</option>
+          <option value="1">Jeden gracz</option>
+          <option value="2">Dwóch graczy</option>
+        </select>
+      </div>
+      <div class="mess">
+        <p class="mess" id="diff2">Wybierz poziom trudności</p>
+      </div>
+      <div class="select" id="diff1">
+        <select name="diff" id="diff">
+          <option value="0" selected disabled>-</option>
+          <option value="1">Łatwy</option>
+          <option value="2">Średni</option>
+          <option value="3">Trudny</option>
+        </select>
+      </div>
     </div>
-    <button id="start" onClick="onStartGame()"> Rozpocznij gre </button>
-  </div>
-  <table id="board">
-    <tr>
-      <td class="cell" id="0"></td>
-      <td class="cell" id="1"></td>
-      <td class="cell" id="2"></td>
-    </tr>
-    <tr>
-      <td class="cell" id="3"></td>
-      <td class="cell" id="4"></td>
-      <td class="cell" id="5"></td>
-    </tr>
-    <tr>
-      <td class="cell" id="6"></td>
-      <td class="cell" id="7"></td>
-      <td class="cell" id="8"></td>
-    </tr>
-  </table> 
-  <div class="end-game">
-    <div class="text"> </div>
-    <button id="restart" onClick="onStartGame()"> Zagraj jeszcze raz </button>
-    <button id="change" onClick="onSetupGame()"> Zagraj w inny tryb </button>
+    <div class="start">
+      <button id="start" onClick="onStartGame()"> Rozpocznij gre </button>
+    </div>
+    <div class="board">
+      <table id="board">
+        <tr>
+          <td class="cell" id="0"></td>
+          <td class="cell" id="1"></td>
+          <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="3"></td>
+          <td class="cell" id="4"></td>
+          <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="6"></td>
+          <td class="cell" id="7"></td>
+          <td class="cell" id="8"></td>
+        </tr>
+      </table> 
+    </div>
+    <div class="end-game">
+      <div class="text"> </div>
+      <button id="restart" onClick="onStartGame()"> Zagraj jeszcze raz </button>
+      <button id="change" onClick="onSetupGame()"> Zagraj w inny tryb </button>
+    </div>
   </div>
 </body>
 <script src="script.js"></script>
