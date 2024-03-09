@@ -114,9 +114,9 @@ table tr td:last-child {
   display: none;
   position: fixed;
   top: 16%;
-  left: 42%;
+  left: 40%;
   padding: 30px;
-  width: 300px;
+  width: 400px;
   box-sizing: border-box;
   color: #EEEEEE;
   background-color: #393E46;
@@ -127,8 +127,6 @@ table tr td:last-child {
 .end-game button {
   display: none;
   position: fixed;
-  top: 75%;
-  left: 38%;
   cursor: pointer;
   color: #ecf0f1;
   font-size: 17px;
@@ -140,4 +138,12 @@ table tr td:last-child {
   width: 450px;
   font-size: 1.5em;
   text-align: center;
+}
+.end-game #restart {
+  top: 75%;
+  left: 38%;
+}
+.end-game #change {
+  top: 85%;
+  left: 38%;
 }
