@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RWD + SPA</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h2 onclick="switchTabs('TicketKing')"><span>Ticket</span>King</h2>
+			<nav>
+				<a onclick="switchTabs('BuyPage')">Kup bilet</a>
+				<a onclick="switchTabs('Contact')">Kontakt</a>
+			</nav>
+			<button class="hamburger">
+				<div class="bar"></div>
+			</button>
+		</div>
+	</header>
+	<nav class="mobile-nav">
+		<a onclick="switchTabs('BuyPage')">Kup bilet</a>
+		<a onclick="switchTabs('Contact')">Kontakt</a>
+	</nav>
+	<div class="TicketKing">
+		<section class="banner">
+			<div class="container">
+				<h1> Zakup bilety na euro <br class="hide-mob"/>
+					<span>szybko</span> i bezpiecznie 
+				</h1>
+				<a onclick="switchTabs('BuyPage')" class="button">Kup teraz</a>
+			</div>
+		</section>
+		<section class="history">
+			<div class="container">
+				<h2>Historia</h2>
+				
+				<div class="history-grid">
+					<div class="events" id="ms2022">
+						<div class="content">
+							<h3>MŚ 2022</h3>
+							<p>Dokładnie 18 grudnia 2022 roku zakończyły się mistrzostwa świata w Katarze. Wygrała je reprezentacja Argentyny, a Polacy po 36 latach awansowali do fazy pucharowej. Oto najważniejsze wydarzenia tego turnieju...</p>
+							<a href="#" class="button">Więcej</a>
+						</div>
+					</div>
+					<div class="events" id="eu2020">
+						<div class="content">
+							<h3>EURO 2020</h3>
+							<p>Z okazji 60-lecia pierwszego Euro we Francji, mistrzostwa 2020 nie będą miały jednego gospodarza, a mecze będą rozgrywane na całym kontynencie. Tak więc zmagania można było śledzić od dalekiego Baku aż po Londyn i Sewillę.</p>
+							<a href="#" class="button">Więcej</a>
+						</div>
+					</div>
+					<div class="events" id="ms2018">
+						<div class="content">
+							<h3>MŚ 2018</h3>
+							<p>Gospodarzem Mundialu 2018 była Rosja. Otwarcie MŚ miało miejsce 14 czerwca na stadionie w Moskwie, zaś wielki finał 15 lipca. Na rosyjskich stadionach rozegrano łącznie 64 mecze, w których padło 168 goli. Pamiętacie wszystkike?</p>
+							<a href="#" class="button">Więcej</a>
+						</div>
+					</div>
+					<div class="events" id="eu2016">
+						<div class="content">
+							<h3>EURO 2016</h3>
+							<p>Euro 2016 było najbardziej udanymi mistrzostwami Europy w historii dla reprezentacji Polski. Drużyna Adama Nawałki dotarła aż do ćwierćfinału, w którym okazała się słabsza tylko od późniejszych triumfatorów - Portugalczyków.</p>
+							<a href="#" class="button">Więcej</a>
+						</div>
+					</div>
+					<div class="events" id="ms2014">
+						<div class="content">
+							<h3>MŚ 2014</h3>
+							<p>Mundial 2014 był rozgrywany w Brazylii. Mistrzem Świata po raz czwarty ostały Niemcy, zostając pierwszą w historii europejską drużyną, która triumfowała w mistrzostwach organizowanych na kontynencie amerykańskim.</p>
+							<a href="#" class="button">Więcej</a>
+						</div>
+					</div>
+					<div class="events" id="eu2012">
+						<div class="content">
+							<h3>EURO 2012</h3>
+							<p>Po raz pierwszy wielka piłkarska impreza zawitała do Polski. Jak poradziliśmy sobie jako gospodarze? Czy pamiętacie serie rzutów karnych w wielkim finale? Przeżyjmy jeszcze raz to wspaniałe, historyczne wydarzenie!</p>
+							<a href="#" class="button">Więcej</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="BuyPage">
+		<section class="banner">
+			<div class="container">
+				<h1> Wybierz mecz <br class="hide-mob"/>
+					na który chcesz kupić bilet
+				</h1>
+			</div>
+		</section>
+		<section class="tickets">
+			<div class="container">
+				<h2>Mecze Reprezentacji Polski w fazie grupowej</h2>			
+				<div class="tickets-grid">		
+					<div class="ticket">
+						<figure class="img-box">
+							<img src="./assets/images/ticket-1.jpg" alt="Pierwszy mecz" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Polska - Holandia</h3>
+						</div>
+					</div>
+			
+					<div class="ticket">
+						<figure class="img-box">
+							<img src="./assets/images/ticket-2.jpg" alt="Drugi mecz" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Polska - Austria</h3>
+						</div>
+					</div>
+					
+					<div class="ticket">
+						<figure class="img-box">
+							<img src="./assets/images/ticket-3.jpg" alt="Trzeci mecz" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Polska - Francja</h3>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</section>
+		<section class="tickets">
+			<div class="container">
+				<h2>Mecze Finałowe</h2>			
+				<div class="tickets-grid">		
+					<div class="ticket">
+						<figure class="img-box">
+							<img src="./assets/images/ticket-0.jpg" alt="Półfinał jeden" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Półfinał nr. 1</h3>
+						</div>
+					</div>
+			
+					<div class="ticket">
+						<figure class="img-box">
+							<img src="./assets/images/ticket-0.jpg" alt="Półfinał dwa" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Półfinał nr. 2</h3>
+						</div>
+					</div>
+					
+					<div class="ticket">
+						<figure class="img-box">
+							<img src="./assets/images/ticket-0.jpg" alt="Finał" class="img" />
+						</figure>
+						<div class="content">
+							<h3>Wielki finał</h3>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="Contact">
+		<section class="contact">
+			<div class="contact-grid">
+				<div class="container">
+					<h1> Skontaktuj się z nami </h1>
+				</div>
+				<div class="container">			
+					<form>
+						<div class="form-grid">
+							<input type="text" name="name" id="name" placeholder="Imie" class="form-element" />
+							<input type="email" name="email" id="email" placeholder="Mail" class="form-element" />
+							<textarea name="message" id="message" placeholder="Wiadomość" class="form-area"></textarea>
+						</div>
+						<div class="center-align">
+							<input type="submit" value="Wyślij wiadomość" class="button" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="./assets/js/main.js"></script>
+</body>
+</html>
