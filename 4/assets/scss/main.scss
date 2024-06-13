@@ -1,0 +1,557 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding-left: 128px;
+	padding-right: 128px;
+	@media (max-width: 1024px) {
+		padding-left: 64px;
+		padding-right: 64px;
+	}
+
+	@media (max-width: 640px) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
+.hamburger {
+	position: relative;
+	display: block;
+	width: 35px;
+	cursor: pointer;
+	
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #FFF;
+	margin: 6px 0px;
+	transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color: #12002F;
+	padding-top: 120px;
+	transition: 0.4s;
+  a:hover {
+    cursor:pointer;
+   }
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+	background-color: #1f103F;
+
+	color: #FFF;
+	text-decoration: none;
+}
+
+.mobile-nav a:hover {
+	background-color: #24104f;
+}
+
+@media (min-width: 640px) {
+	.mobile-nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+}
+
+section {
+	h2 {
+		text-align: center;
+		margin-bottom: 32px;
+		text-transform: uppercase;
+
+		color: #313131;
+		font-size: 36px;
+	}
+}
+
+.button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+
+	display: inline-block;
+	color: #FFF;
+	font-size: 20px;
+	background-color: #FF9FDB;
+	padding: 12px 16px;
+	border-radius: 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+
+	@media (max-width: 640px) {
+		font-size: 18px;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+
+	.container {
+		padding-top: 32px;
+		padding-bottom: 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+    a:hover {
+      cursor:pointer;
+     }
+		h2 {
+			color: inherit;
+			text-transform: uppercase;
+			font-size: 32px;
+			font-weight: 900;
+			span {
+				font-weight: 600;
+			}
+		}
+    h2:hover {
+      cursor: pointer;
+    }
+		nav {
+			display: grid;
+			grid-gap: 16px;
+			grid-template-columns: repeat(4, auto);
+
+			@media (max-width: 640px) {
+				display: none;
+			}
+
+			a {
+				color: inherit;
+				font-size: 20px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&.is-scrolling {
+		background-color: #12002F;
+		.container {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+	}
+}
+
+.TicketKingPL, .TicketKingEN{
+	section.banner {
+		color: #FFF;
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+
+		background-image: url('../images/background-1.jpg');
+		background-position: top right;
+		background-size: cover;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+			background-color: #12002F;
+			opacity: 0.8;
+		}
+
+		.container {
+			position: relative;
+			z-index: 1;
+
+			h1 {
+				font-size: 72px;
+				margin-bottom: 32px;
+				
+				span {
+					color: #FF9FDB;
+				}
+
+				@media (max-width: 640px) {
+					font-size: 32px;
+				}
+			}
+
+			h3 {
+				font-size: 36px;
+				font-weight: 400;
+				margin-bottom: 32px;
+
+				@media (max-width: 640px) {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.history {
+		padding-top: 64px;
+		padding-bottom: 64px;
+
+		.history-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 16px;
+			margin-bottom: 32px;
+			@media (max-width: 640px) {
+				grid-template-columns: 1fr;
+			}
+      #ms2022 {
+        background-image: url('../images/history-1.jpg');
+      }
+      #eu2020 {
+				background-image: url('../images/history-2.jpg');
+      }
+      #ms2018
+      {
+				background-image: url('../images/history-3.jpg');
+      }
+      #eu2016
+      {
+        background-image: url('../images/history-4.jpg');
+      }
+      #ms2014
+      {
+        background-image: url('../images/history-5.jpg');
+      }
+      #eu2012
+      {
+        background-image: url('../images/history-6.jpg');
+      }
+			.events {
+				border-radius: 16px;
+				overflow: hidden;
+
+				.content {
+					opacity: 0;
+					color: #FFF;
+					padding: 16px;
+					background-color: rgba(64, 39, 68, 0.8);
+					transition: 0.4s;
+
+					h3 {
+						font-size: 32px;
+						margin-bottom: 16px;
+
+						@media (max-width: 1024px) {
+							font-size: 28px;
+						}
+					}
+
+					p {
+						font-size: 18px;
+						margin-bottom: 16px;
+
+						@media (max-width: 1024px) {
+							font-size: 16px;
+						}
+					}
+				}
+
+				&:hover {
+					.content {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.center {
+			text-align: center;
+		}
+	}
+}
+
+.TicketKingEN {
+	display: none;
+}
+
+.BuyPagePL , .BuyPageEN {
+  display: none;
+    section.banner {
+      color: #FFF;
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      background-image: url('../images/background-2.jpg');
+      background-position: top right;
+      background-size: cover;
+  
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background-color: #12002F;
+        opacity: 0.8;
+      }
+  
+      .container {
+        position: relative;
+        z-index: 1;
+  
+        h1 {
+          font-size: 72px;
+          margin-bottom: 32px;
+          @media (max-width: 640px) {
+            font-size: 32px;
+          }
+        }
+  
+        h3 {
+          font-size: 36px;
+          font-weight: 400;
+          margin-bottom: 32px; 
+          @media (max-width: 640px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .tickets {
+      background-color: #EEE; 
+      .container {
+        padding-top: 32px;
+        padding-bottom: 32px;
+  
+        .tickets-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 16px;
+          @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+          } 
+          .ticket {
+            background-color: #FFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  
+            .img-box {
+              display: block;
+              width: 100%;
+              border-bottom: 5px solid #FF9FDB;
+  
+              .img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+              }
+            }  
+            .content {
+              padding: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+.ContactPL, .ContactEN{
+  display: none;
+    section.contact {
+      color: #FFF;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-image: url('../images/background-3.jpg');
+      background-position: top right;
+      background-size: cover; 
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background-color: #12002F;
+        opacity: 0.8;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        @media (max-width: 640px) {
+          grid-template-columns: 1fr;
+          margin: auto;
+        }  
+        }
+      .container {
+        position: relative;
+        z-index: 1;
+        h1 {
+          font-size: 72px;
+          margin-bottom: 32px;
+          @media (max-width: 640px) {
+            font-size: 32px;
+          }
+        } 
+        h3 {
+          font-size: 36px;
+          font-weight: 400;
+          margin-bottom: 32px; 
+          @media (max-width: 640px) {
+            font-size: 20px;
+          }
+        }
+      }
+      form {
+        display: block;
+        margin: 0 auto;
+        max-width: 680px;
+        .form-grid {
+          display: grid;
+          grid-gap: 16px;
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 16px;
+          @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+          }
+
+          .form-element, .form-area {
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+
+            display: block;
+            width: 100%;
+            background-color: #FFF;
+            border-radius: 8px;
+
+            padding: 16px;
+            font-size: 20px;
+            color: #313131;
+
+            &::placeholder {
+              color: #AAA;
+            }
+          }
+
+          .form-area {
+            grid-column: 1/-1;
+          }
+        }  
+        .center-align {
+          text-align: center;
+        }
+      }
+    }
+  }
+@media (max-width: 640px) {
+	.hide-mob {
+		display: none;
+	}
+}
+
+.flag {
+	width: auto;
+	height: 25px;
+	margin-left: 10px;
+}
+
+.navEN {
+	display: none;
+}
+
+.Cookies{
+	display: none;
+	background: #444;
+	color: #fff;
+	padding: 6px;
+	font-size: 15px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 10;
+  }
+.Cookies button{
+	text-decoration: none;
+	background: #222;
+	color: #fff;
+	border: 1px solid #000;
+	cursor: pointer;
+	padding: 4px 7px;
+	margin: 2px 0;
+	font-size: 13px;
+	font-weight: 700;
+	transition: background 0.07s, color 0.07s, border-color 0.07s;
+	margin-left: 20px;
+  }
+  
+.Cookies button:hover{
+	background: #fff;
+	color: #222;
+}
